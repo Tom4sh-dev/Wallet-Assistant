@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 10px;
+}
+
+.wrapper {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+// Header
+
+.header {
+	background-color: #ccc;
+	&__container {
+		display: flex;
+		align-items: center;
+		padding: 0 5%;
+		height: 80px;
+		width: 100%;
+	}
+	&__title {
+		text-align: center;
+		font-size: 2rem;
+	}
+	&__side-items {
+		margin-left: auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__history {
+		margin: 0 10px;
+		display: flex;
+		align-items: center;
+		font-size: 1.2rem;
+		// visibility: hidden;
+		cursor: pointer;
+		transition: opacity 0.2s;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+	.themes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&__btn {
+			height: 20px;
+			width: 20px;
+			margin: 10px;
+			border: none;
+			border-radius: 50%;
+			background-color: #000;
+			cursor: pointer;
+			transition: opacity 0.2s;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+		&__theme-name {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+// Main
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// min-height: calc(100vh - 110px);
+	width: 100%;
+	&__box {
+		position: relative;
+		margin: 20px auto;
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+		text-align: center;
+		cursor: pointer;
+		&:hover .main__info {
+			opacity: 1;
+		}
+	}
+	&__title {
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+	&__info {
+		position: absolute;
+		padding: 10px;
+		width: 90%;
+		max-width: 300px;
+		font-size: 1rem;
+		opacity: 0;
+		transition: opacity 0.3s;
+		&-first {
+			top: -110%;
+		}
+		&-second {
+			bottom: -110%;
+		}
+	}
+
+	// Budget Planner
+	.budget-page {
+		display: flex;
+		justify-content: center;
+		align-self: start;
+		flex-wrap: wrap;
+		width: 100%;
+		text-align: center;
+		&__title {
+			margin: 20px auto 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 10%;
+			text-transform: uppercase;
+			font-size: 1.8rem;
+		}
+		&__info-btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			height: 30px;
+			width: 30px;
+		}
+		.section {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 90%;
+			min-height: 45%;
+			&__title {
+				width: 100%;
+				text-align: left;
+				text-transform: uppercase;
+				font-size: 1.4rem;
+			}
+			&__child {
+				position: relative;
+				margin: 30px 20px;
+				display: flex;
+				justify-content: center;
+				width: 45%;
+				min-width: 300px;
+
+				.table {
+					margin: 0 auto;
+					width: 100%;
+					border-spacing: 0;
+					overflow: auto;
+					font-size: 1rem;
+					text-align: left;
+					&__header {
+						position: sticky;
+						top: 0;
+						vertical-align: bottom;
+						width: 100%;
+						background-color: #ccc;
+						font-size: 1.2rem;
+						text-align: left;
+						th {
+							padding: 5px 10px;
+						}
+					}
+					&__title {
+						border-right: 1px solid #fff;
+					}
+					tbody {
+						white-space: nowrap;
+					}
+					td {
+						border: 1px solid #ccc;
+						padding: 5px 10px;
+						border-top-width: 0;
+					}
+					td.table__sum {
+						text-align: center;
+						border-left-width: 0;
+					}
+					td.table__element-amount {
+						border-left-width: 0;
+					}
+					&__element-description {
+						max-width: 200px;
+						text-wrap: wrap;
+					}
+					&__element-amount {
+						width: 100px;
+						text-align: center;
+					}
+					&__footer-header {
+						padding-right: 20px;
+						text-align: right;
+						border-right: 1px solid #ccc;
+						border-bottom-width: 0;
+						border-left-width: 0;
+					}
+				}
+				.add-line-btn {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background: transparent;
+					border: none;
+					height: 20px;
+					width: 20px;
+					background-color: #ccc;
+					cursor: pointer;
+					transition: opacity 0.2s;
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+			&__child.stats {
+				flex-direction: column;
+			}
+			.stats {
+				&__item {
+					margin: 10px auto;
+					display: flex;
+					font-size: 1.4rem;
+				}
+				&__title {
+					margin-right: 20px;
+				}
+				&__income {
+					color: green;
+				}
+				&__expenses {
+					color: red;
+				}
+			}
+		}
+	}
+}
+
+// Footer
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	font-size: 1.4rem;
+	background-color: #ccc;
+}

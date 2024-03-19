@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Architects Daughter", cursive;
+  font-size: 10px;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #ccc;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  height: 80px;
+  width: 100%;
+}
+.header__title {
+  text-align: center;
+  font-size: 2rem;
+}
+.header__side-items {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.header__history {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.header__history:hover {
+  opacity: 0.6;
+}
+.header .themes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .themes__btn {
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.header .themes__btn:hover {
+  opacity: 0.6;
+}
+.header .themes__theme-name {
+  font-size: 1.2rem;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main__box {
+  position: relative;
+  margin: 20px auto;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  text-align: center;
+  cursor: pointer;
+}
+.main__box:hover .main__info {
+  opacity: 1;
+}
+.main__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.main__info {
+  position: absolute;
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.main__info-first {
+  top: -110%;
+}
+.main__info-second {
+  bottom: -110%;
+}
+.main .budget-page {
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+.main .budget-page__title {
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+.main .budget-page__info-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+}
+.main .budget-page .section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  min-height: 45%;
+}
+.main .budget-page .section__title {
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.main .budget-page .section__child {
+  position: relative;
+  margin: 30px 20px;
+  display: flex;
+  justify-content: center;
+  width: 45%;
+  min-width: 300px;
+}
+.main .budget-page .section__child .table {
+  margin: 0 auto;
+  width: 100%;
+  border-spacing: 0;
+  overflow: auto;
+  font-size: 1rem;
+  text-align: left;
+}
+.main .budget-page .section__child .table__header {
+  position: sticky;
+  top: 0;
+  vertical-align: bottom;
+  width: 100%;
+  background-color: #ccc;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.main .budget-page .section__child .table__header th {
+  padding: 5px 10px;
+}
+.main .budget-page .section__child .table__title {
+  border-right: 1px solid #fff;
+}
+.main .budget-page .section__child .table tbody {
+  white-space: nowrap;
+}
+.main .budget-page .section__child .table td {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-top-width: 0;
+}
+.main .budget-page .section__child .table td.table__sum {
+  text-align: center;
+  border-left-width: 0;
+}
+.main .budget-page .section__child .table td.table__element-amount {
+  border-left-width: 0;
+}
+.main .budget-page .section__child .table__element-description {
+  max-width: 200px;
+  text-wrap: wrap;
+}
+.main .budget-page .section__child .table__element-amount {
+  width: 100px;
+  text-align: center;
+}
+.main .budget-page .section__child .table__footer-header {
+  padding-right: 20px;
+  text-align: right;
+  border-right: 1px solid #ccc;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+.main .budget-page .section__child .add-line-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  border: none;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.main .budget-page .section__child .add-line-btn:hover {
+  opacity: 0.8;
+}
+.main .budget-page .section__child.stats {
+  flex-direction: column;
+}
+.main .budget-page .section .stats__item {
+  margin: 10px auto;
+  display: flex;
+  font-size: 1.4rem;
+}
+.main .budget-page .section .stats__title {
+  margin-right: 20px;
+}
+.main .budget-page .section .stats__income {
+  color: green;
+}
+.main .budget-page .section .stats__expenses {
+  color: red;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-size: 1.4rem;
+  background-color: #ccc;
+}/*# sourceMappingURL=main.css.map */
